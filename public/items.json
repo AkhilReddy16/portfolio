@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Experince",
+        "data": [
+            {
+                "id": 1,
+                "title": "Application Programmer V",
+                "company": "Bank of America",
+                "image": "/portfolio/bofa_logo.png",
+                "from": 2025,
+                "to": "Present"
+            },
+            {
+                "id": 2,
+                "title": "Software Engineer",
+                "company": "S&P Global (Dow Jones)",
+                "image": "/portfolio/S&P_logo.png",
+                "from": 2023,
+                "to": 2025
+            },
+            {
+                "id": 3,
+                "title": "Graduate Assistant",
+                "company": "Eastern Kentucky University",
+                "image": "/portfolio/eku_logo.png",
+                "from": 2022,
+                "to": 2023
+            },
+            {
+                "id": 4,
+                "title": "Software Engineer",
+                "company": "Entain PLC (IVY Software Development Services)",
+                "image": "/portfolio/entain_logo.png",
+                "from": 2021,
+                "to": 2022
+            },
+            {
+                "id": 5,
+                "title": "Graduate Engineering Trainee",
+                "company": "Nineleaps",
+                "image": "/portfolio/nl_logo.png",
+                "from": 2019,
+                "to": 2021
+            }
+        ]
+    },
+    {
+        "name": "Education",
+        "data": [
+            {
+                "id": 1,
+                "title": "Master of Science (Computer Science)",
+                "company": "Eastern Kentucky University",
+                "image": "/portfolio/eku_logo.png",
+                "from": 2022,
+                "to": 2023
+            },
+            {
+                "id": 2,
+                "title": "B Tech (Electronics and Communications Engineering)",
+                "company": "Lovely Professional University",
+                "image": "/portfolio/lpu_logo.png",
+                "from": 2016,
+                "to": 2020
+            }
+        ]
+    }
+]

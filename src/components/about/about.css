@@ -7,7 +7,7 @@
 
 #about .div-img-bg {
   padding-bottom: 30px;
-  border: 20px solid #b8a07e;
+  border: 20px solid #999;
 }
 
 #about .div-img-bg .about-img img {
@@ -24,6 +24,7 @@
   font-family: "Playfair Display", serif;
   font-size: clamp(1.2rem, 4vw, 2.2rem);
   text-align: left;
+  font-weight: 700;
 }
 
 #about .about-descr .separator {
