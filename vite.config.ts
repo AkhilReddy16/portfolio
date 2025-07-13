@@ -13,5 +13,5 @@ export default defineConfig({
       }
     }
   },
-  base: './portfolio/', // Ensures that the app works correctly when deployed
+  base: '/portfolio/', // Ensures that the app works correctly when deployed
 })
