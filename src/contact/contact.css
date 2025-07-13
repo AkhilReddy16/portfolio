@@ -1,0 +1,30 @@
+#contact {
+  height: auto;
+  width: 100%;
+}
+
+.contact-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-details li {
+  padding-bottom: 10px;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#contact textarea {
+  min-height: 160px;
+}
+
+.sent-message{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
