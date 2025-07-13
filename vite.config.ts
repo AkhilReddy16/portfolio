@@ -12,5 +12,6 @@ export default defineConfig({
         assetFileNames: `assets/[name].[ext]`
       }
     }
-  }
+  },
+  base: './portfolio/', // Ensures that the app works correctly when deployed
 })
