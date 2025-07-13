@@ -17,9 +17,11 @@ const skills = [
   { icon: 'devicon-mysql-original colored', label: 'mysql' },
   { icon: 'devicon-postgresql-plain colored', label: 'postgresql' },
   { icon: 'devicon-mongodb-plain colored', label: 'mongodb' },
+  { icon: 'devicon-apachespark-plain-wordmark colored', label: 'spark' },
   { icon: 'devicon-spring-original colored', label: 'spring' },
   { icon: 'devicon-maven-plain colored', label: 'maven' },
   { icon: 'devicon-redis-plain colored', label: 'redis' },
+  { icon: 'devicon-apachekafka-original colored', label: 'kafka' },
   { icon: 'devicon-amazonwebservices-plain-wordmark colored', label: 'aws' },
   { icon: 'devicon-hadoop-plain colored', label: 'hadoop' },
 ];
