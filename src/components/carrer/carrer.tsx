@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Card, Container, Spinner } from 'react-bootstrap';
-import './Carrer.css';
+import './carrer.css';
 
 type CareerEntry = {
     id: number;
