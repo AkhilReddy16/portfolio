@@ -23,12 +23,23 @@
   min-height: 160px;
 }
 
-.sent-message{
+.sent-message {
   text-align: center;
   font-size: 1.2rem;
   margin-top: 20px;
 }
 
-.form-control{
+.form-control {
   text-transform: none;
+}
+
+@media (max-width: 995px) {
+  .contact-contact {
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
