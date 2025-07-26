@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Website",
+    "description": "A personal website to showcase my skills and experience.",
+    "image": "/portfolio/portfolio.png",
+    "link": "https://akhilreddy16.github.io/portfolio"
+  },
+  {
+    "id": 2,
+    "title": "Car Price Prediction",
+    "description": "A machine learning model that predicts used car prices.",
+    "image": "/portfolio/carPrice.png",
+    "link": "https://github.com/AkhilReddy16/CarPricePrediction"
+  },
+  {
+    "id": 3,
+    "title": "Personal Calender App",
+    "description": "A .NET Application for personal calendar.",
+    "image": "/portfolio/calendar.png",
+    "link": "https://github.com/AkhilReddy16/Personal_Calendar"
+  },
+  {
+    "id": 4,
+    "title": "ATM App",
+    "description": "A .NET Application for ATM (Automated Teller Machine).",
+    "image": "/portfolio/ATM.png",
+    "link": "https://github.com/AkhilReddy16/ATM"
+  },
+  {
+    "id": 5,
+    "title": "FPGA Vending Machine",
+    "description": "An FPGA based Vending Machine Application.",
+    "image": "/portfolio/vending-machine.png",
+    "link": "https://github.com/AkhilReddy16/fpga-based-vending-meachine"
+  }
+]

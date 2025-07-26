@@ -8,7 +8,7 @@ function Header() {
   const [hideNav, setHideNav] = useState(true);
   const homeRef = useRef<HTMLElement | null>(null);
 
-  const sectionIds = ['home', 'about', 'skills', 'carrer', 'contact'];
+  const sectionIds = ['home', 'about', 'skills', 'carrer', 'portfolio', 'contact'];
   const activeId = useScrollSpy(sectionIds);
 
   useEffect(() => {
