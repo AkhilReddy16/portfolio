@@ -1,6 +1,6 @@
 import './skills.css';
 import 'swiper/css';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const skills = [
   { icon: 'devicon-java-plain-wordmark colored', label: 'Java' },
@@ -28,7 +28,7 @@ const skills = [
   { icon: 'devicon-jenkins-line colored', label: 'jenkins' },
   { icon: 'devicon-docker-plain colored', label: 'docker' },
 ];
-
+/*
 function Skills() {
   useEffect(() => {
     const target = document.querySelector('.animation-trigger');
@@ -74,5 +74,55 @@ function Skills() {
     </div>
   );
 }
+
+import { useEffect, useRef } from 'react';
+*/
+function Skills() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          sectionRef.current?.classList.add('animate');
+        } else {
+          sectionRef.current?.classList.remove('animate');
+        }
+      },
+      {
+        threshold: 0.3, // Trigger when 30% visible
+      }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
+  return (
+    <div
+      id="skills"
+      className="paddsection animation-trigger"
+      ref={sectionRef}
+    >
+      <div className="container">
+        <div className="section-title text-center">
+          <h2>My Skills</h2>
+        </div>
+        <div className="skills-grid">
+          {skills.map((skill, idx) => (
+            <div className="skills-item" key={idx}>
+              <i className={skill.icon}></i>
+              <span>{skill.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 export default Skills;

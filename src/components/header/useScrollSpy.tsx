@@ -12,7 +12,13 @@ export function useScrollSpy(sectionIds: string[]) {
         if (section) {
           const { offsetTop, offsetHeight } = section;
           if (scrollY >= offsetTop && scrollY < offsetTop + offsetHeight) {
-            setActiveId(id);
+            setActiveId((prevId) => {
+              if (prevId !== id) {
+                // Update the URL hash without scrolling
+                history.replaceState(null, '', `#${id}`);
+              }
+              return id;
+            });
             break;
           }
         }
@@ -20,11 +26,12 @@ export function useScrollSpy(sectionIds: string[]) {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Run on mount
+    handleScroll(); // Trigger on load
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [sectionIds]);
 
   return activeId;
 }
+
 export default useScrollSpy;
