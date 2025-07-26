@@ -30,31 +30,11 @@
   margin-top: 0.25rem;
 }
 
-/* Mobile-first: Image left, title and year stacked 
-.career-card-body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  text-align: left;
+.description {
+    margin-left: 75px;
+    text-align: justify;
 }
 
-.career-img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.career-title,
-.career-year {
-  width: 100%;
-  margin-top: 0.25rem;
-}
-*/
-/* ≥600px: All three in a row */
 @media (min-width: 600px) {
     .career-card-body {
         flex-direction: row;
@@ -80,32 +60,7 @@
         text-align: right;
     }
 
-    /*.career-card-body {
-        display: flex;
-        justify-content: flex-start;
-        text-align: left;
+    .description{
+        margin-left: 90px;
     }
-
-    .career-content {
-        display:flex;
-        flex-direction: auto;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .career-title,
-    .career-year {
-        width: auto;
-        margin-top: 0;
-    }
-
-    .career-title {
-        margin-right: auto;
-        font-weight: 500;
-    }
-
-    .career-year {
-        min-width: 100px;
-        text-align: right;
-    }*/
 }

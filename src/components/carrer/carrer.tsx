@@ -9,6 +9,7 @@ type CareerEntry = {
     image: string;
     from: number | string;
     to: number | string;
+    description: string[];
 };
 
 type CareerGroup = {
@@ -19,6 +20,8 @@ type CareerGroup = {
 function Carrer() {
     const [items, setItems] = useState<CareerGroup[]>([]);
     const [loading, setLoading] = useState(true);
+    const [expandedIds, setExpandedIds] = useState<Set<number>>(new Set());
+
 
     useEffect(() => {
         fetch('/portfolio/items.json')
@@ -32,6 +35,15 @@ function Carrer() {
                 setLoading(false);
             });
     }, []);
+
+    const toggleExpand = (id: number) => {
+        setExpandedIds((prev) => {
+            const newSet = new Set(prev);
+            newSet.has(id) ? newSet.delete(id) : newSet.add(id);
+            return newSet;
+        });
+    };
+
 
     return (
         <div id="carrer" className="paddsection">
@@ -50,8 +62,8 @@ function Carrer() {
                                 ) : (
                                     <div className="d-flex flex-column gap-3 w-100">
                                         {data.map(
-                                            ({ id, title, company, image, from, to }) => (
-                                                <Card key={id} className="p-3 shadow-sm">
+                                            ({ id, title, company, image, from, to, description }) => (
+                                                <Card key={id} className="p-3 shadow-sm" onClick={() => toggleExpand(id)}>
                                                     <div className="career-card-body">
                                                         <img
                                                             src={image}
@@ -68,6 +80,14 @@ function Carrer() {
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    {expandedIds.has(id) && description && (
+                                                        <ul className="description mt-3 mb-1 ps-4 text-secondary">
+                                                            {description.map((point, index) => (
+                                                                <li key={index}>{point}</li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
                                                 </Card>
                                             )
                                         )}
@@ -84,21 +104,3 @@ function Carrer() {
 }
 
 export default Carrer;
-/*({ id, title, company, image, from, to }) => (
-    <Card key={id} className="p-3 shadow-sm">
-        <div className="career-card-body">
-            <img
-                src={image}
-                alt={title}
-                className="career-img"
-            />
-            <div className="career-content">
-                <div className="career-title">
-                    <div>{title}</div>
-                    <div>{company}</div>
-                </div>
-                <div className="career-year text-muted">{from} – {to}</div>
-            </div>
-        </div>
-    </Card>
-)*/

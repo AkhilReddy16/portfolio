@@ -1,4 +1,3 @@
-import Skills from '../skills/skills';
 import './about.css';
 
 function About() {
@@ -25,8 +24,6 @@ function About() {
           </div>
         </div>
       </div>
-
-      <Skills />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Header from './components/header/header'
 import Home from './components/home/home'
 import Contact from './components/contact/contact'
 import Carrer from './components/carrer/carrer'
+import Skills from './components/skills/skills'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Home />
       <About />
+      <Skills />
       <Carrer />
       <Contact />
       <Footer />

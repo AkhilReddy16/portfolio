@@ -1,7 +1,6 @@
 import './skills.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import { useEffect } from 'react';
 
 const skills = [
   { icon: 'devicon-java-plain-wordmark colored', label: 'Java' },
@@ -14,49 +13,63 @@ const skills = [
   { icon: 'devicon-typescript-plain colored', label: 'typeScript' },
   { icon: 'devicon-angularjs-plain colored', label: 'Angular' },
   { icon: 'devicon-react-original colored', label: 'React' },
+  { icon: 'devicon-oracle-original colored', label: 'Oracle' },
   { icon: 'devicon-mysql-original colored', label: 'mysql' },
   { icon: 'devicon-postgresql-plain colored', label: 'postgresql' },
   { icon: 'devicon-mongodb-plain colored', label: 'mongodb' },
-  { icon: 'devicon-apachespark-plain-wordmark colored', label: 'spark' },
-  { icon: 'devicon-spring-original colored', label: 'spring' },
-  { icon: 'devicon-maven-plain colored', label: 'maven' },
   { icon: 'devicon-redis-plain colored', label: 'redis' },
-  { icon: 'devicon-apachekafka-original colored', label: 'kafka' },
+  { icon: 'devicon-apachespark-plain-wordmark colored', label: 'spark' },
+  { icon: 'devicon-hadoop-plain colored', label: 'Hadoop' },
+  { icon: 'devicon-apachekafka-original colored', label: 'Kafka' },
+  { icon: 'devicon-spring-original colored', label: 'Spring' },
+  { icon: 'devicon-maven-plain colored', label: 'maven' },
   { icon: 'devicon-amazonwebservices-plain-wordmark colored', label: 'aws' },
-  { icon: 'devicon-hadoop-plain colored', label: 'hadoop' },
+  { icon: 'devicon-anaconda-original colored', label: 'Anaconda' },
+  { icon: 'devicon-jenkins-line colored', label: 'jenkins' },
+  { icon: 'devicon-docker-plain colored', label: 'docker' },
 ];
 
 function Skills() {
+  useEffect(() => {
+    const target = document.querySelector('.animation-trigger');
+
+    const resetAnimation = () => {
+      if (!target) return;
+      target.classList.remove('animate');
+      // Force reflow
+      //void target.offsetWidth;
+      target.classList.add('animate');
+    };
+
+    // Replay on hash change (nav click)
+    const handleHashChange = () => {
+      if (window.location.hash === '#skills') {
+        resetAnimation();
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    // Trigger on initial load if already in hash
+    if (window.location.hash === '#skills') resetAnimation();
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
   return (
-    <div id="services">
+    <div id="skills" className="paddsection animation-trigger">
       <div className="container">
         <div className="section-title text-center">
           <h2>My Skills</h2>
         </div>
-      </div>
-      <div className="container">
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={2}
-          loop={true}
-          breakpoints={{
-            640: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-            1440: { slidesPerView: 5 },
-            2560: { slidesPerView: 6 }
-          }}
-          modules={[Autoplay]}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
-        >
+        <div className="skills-grid">
           {skills.map((skill, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="services-block">
-                <i className={skill.icon}></i>
-                <span>{skill.label}</span>
-              </div>
-            </SwiperSlide>
+            <div className="skills-item" key={idx}>
+              <i className={skill.icon}></i>
+              <span>{skill.label}</span>
+            </div>
           ))}
-        </Swiper>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,17 @@
                 "company": "Bank of America",
                 "image": "/portfolio/bofa_logo.png",
                 "from": 2025,
-                "to": "Present"
+                "to": "Present",
+                "description": [
+                    "Designed and developed scalable Full Stack applications using Angular, Java, Spring Boot, and Oracle for financial markets.",
+                    "Led the end-to-end design, development, and deployment of web applications, ensuring high availability and performance.",
+                    "Implemented RESTful APIs and integrated them with front-end applications to provide seamless data flow.",
+                    "Utilized deep knowledge of Global Markets products to enhance financial application development.",
+                    "Worked closely with trading and risk management teams to develop applications aligned with financial regulations and market needs.",
+                    "Implemented monitoring and logging solutions for performance optimization.",
+                    "Automated deployment processes, reducing manual effort and increasing software delivery speed.",
+                    "Improved user experience and system efficiency by customizing Liferay components."
+                ]
             },
             {
                 "id": 2,
@@ -16,7 +26,20 @@
                 "company": "S&P Global (Dow Jones)",
                 "image": "/portfolio/S&P_logo.png",
                 "from": 2023,
-                "to": 2025
+                "to": 2025,
+                "description": [
+                    "Designed and implemented a Java Spring Boot project to fetch stock data from various systems and convert it into user-requested formats, enhancing data accessibility and usability.",
+                    "Deployed microservices on AWS EC2 instances for scalability and high availability, while utilizing Amazon S3 for efficient storage and retrieval of response files.",
+                    "Employed PostgreSQL as the database solution to store customized configuration settings for the application, ensuring secure and efficient management of application configurations.",
+                    "Used MongoDB database to efficiently manage structured and unstructured stock data, ensuring data integrity and flexibility.",
+                    "Implemented Redis cache to optimize system performance by caching frequently accessed data, reducing database load and improving response times.",
+                    "Utilized ActiveMQ for reliable message queuing and communication between microservices, enabling asynchronous processing and seamless data transfer.",
+                    "Employed multithreading for parallel processing of stock data, enhancing system throughput and efficiency.",
+                    "Leveraged Java Spark (Hadoop) for distributed computing and processing of high-volume data, supporting advanced analytics and insights generation.",
+                    "Used Spring Security for authentication and authorization of users, Spring JDBC for easy database operations using JDBC template, writing row mappers and Spring Boot easy bootstrap applications from scratch.",
+                    "Developed and executed test cases, test plans, and test scripts, employing testing frameworks such as JUnit and Karate to validate application functionality and performance.",
+                    "Orchestrated Continuous Integration/Continuous Deployment (CI/CD) pipelines using Jenkins and Git, automating build, test, and deployment processes to streamline software delivery."
+                ]
             },
             {
                 "id": 3,
@@ -24,7 +47,15 @@
                 "company": "Eastern Kentucky University",
                 "image": "/portfolio/eku_logo.png",
                 "from": 2022,
-                "to": 2023
+                "to": 2023,
+                "description": [
+                    "Collaborated with professors to develop engaging course materials tailored to undergraduate students learning needs.",
+                    "Provided expert guidance and support to students on Java projects, fostering their understanding and proficiency in the language.",
+                    "Collaborated closely with students to troubleshoot issues, debug code, and implement effective solutions, ensuring project success and learning outcomes.",
+                    "Offered one-on-one mentoring and advice to improve student performance.",
+                    "Leveraged software programs to organize and report data to different stake holders.",
+                    "Reviewed and graded examinations, papers, and assignments."
+                ]
             },
             {
                 "id": 4,
@@ -32,7 +63,20 @@
                 "company": "Entain PLC (IVY Software Development Services)",
                 "image": "/portfolio/entain_logo.png",
                 "from": 2021,
-                "to": 2022
+                "to": 2022,
+                "description": [
+                    "Designed and implemented a Casino Lobby System that can be tailored to individual user preferences.",
+                    "Drafted software requirements and managed software design and implementation.",
+                    "Successfully migrated a server-based application to AWS ECS (Elastic Container Service), optimizing scalability, reliability, and performance while reducing operational overhead and costs.",
+                    "Implemented Redis cache mechanism to optimize database calls, resulting in significant improvements in application performance and scalability.",
+                    "Optimized response time to less than 10ms for multiple APIs by performance tuning and profiling.",
+                    "Implemented Kafka-based event-driven architecture, enabling seamless and efficient data streaming across various microservices and components, while developing robust Kafka producers and consumers to handle high-volume data streams with reliability, scalability, and fault tolerance.",
+                    "Designed, coded, tested and deployed new features and functionality using CI/CD best practices.",
+                    "Configured and managed build artifacts and dependencies using Gradle, optimizing build performance and dependency management in CI/CD pipelines.",
+                    "Developed and Optimized APIs with a focus on response time.",
+                    "Identified and resolved bottlenecks to achieve faster response times and improved user experience.",
+                    "Involved in JUnit Testing. Debugging and troubleshooting the bugs and resolving the issues."
+                ]
             },
             {
                 "id": 5,
@@ -40,7 +84,16 @@
                 "company": "Nineleaps",
                 "image": "/portfolio/nl_logo.png",
                 "from": 2019,
-                "to": 2021
+                "to": 2021,
+                "description": [
+                    "Developed Java applications as part of an internship, focusing on implementing core functionalities and enhancing user experience.",
+                    "Collaborated with senior developers to design and implement database schemas using technologies such as MySQL and MongoDB.",
+                    "Conducted database operations including data retrieval, insertion, and updating, ensuring data integrity and consistency.",
+                    "Optimized database queries and performance by fine-tuning SQL queries and indexing strategies, resulting in faster application response times.",
+                    "Participated in code reviews and testing processes to identify and rectify database-related issues, ensuring high-quality software deliverables.",
+                    "Assisted in the design and development of RESTful APIs for seamless interaction between the Java backend and database systems.",
+                    "Utilized automation tools like Selenium for web application testing and JMeter for performance testing, streamlining the testing process and improving efficiency."
+                ]
             }
         ]
     },
@@ -53,7 +106,11 @@
                 "company": "Eastern Kentucky University",
                 "image": "/portfolio/eku_logo.png",
                 "from": 2022,
-                "to": 2023
+                "to": 2023,
+                "description": [
+                    "Graduated with 4.0/4.0 GPA.",
+                    "Coursework: Artificial Intelligence, Machine Learning and Big Data."
+                ]
             },
             {
                 "id": 2,
@@ -61,7 +118,11 @@
                 "company": "Lovely Professional University",
                 "image": "/portfolio/lpu_logo.png",
                 "from": 2016,
-                "to": 2020
+                "to": 2020,
+                "description": [
+                    "Graduated with a 3.93/4.0 GPA.",
+                    "Coursework: Java, C++, Database Systems, Embedded Systems Design and VLSI System Design."
+                ]
             }
         ]
     }

@@ -1,10 +1,17 @@
-#services {
+#skills {
   position: relative;
-  margin-top: 30px;
+  margin-top: 90px;
   padding-bottom: 80px;
+  height: 100vh;
 }
 
-.services-block span {
+@media(max-width: 600px) {
+  #skills {
+    height: 100%;
+  }
+}
+
+.skills-block span {
   margin: 0px 0;
   position: relative;
   font-size: 13px;
@@ -15,19 +22,19 @@
   display: block;
 }
 
-.services-block .separator {
+.skills-block .separator {
   margin: 0;
   font-size: 13px;
   line-height: 22px;
 }
 
-.services-block i {
+.skills-block i {
   font-size: 44px;
   color: #b8a07e;
   line-height: 44px;
 }
 
-.services-block {
+.skills-block {
   text-align: center;
 }
 
@@ -35,12 +42,12 @@
     margin-bottom: 40px;
 }
 
-.services-slider .swiper-pagination {
+.skills-slider .swiper-pagination {
   margin-top: 30px;
   position: relative;
 }
 
-.services-slider .swiper-pagination .swiper-pagination-bullet {
+.skills-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -48,6 +55,89 @@
   border: 1px solid #b8a07e;
 }
 
-.services-slider .swiper-pagination .swiper-pagination-bullet-active {
+.skills-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #b8a07e;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  text-align: center;
+}
+
+.skills-item i {
+  font-size: 48px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills-item:hover i {
+  transform: scale(1.15);
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0;
+}
+
+
+
+.skills-item i {
+  font-size: 48px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills-item:hover i {
+  transform: scale(1.15);
+}
+
+.animation-trigger.animate .skills-item {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+/* Stagger animation per item */
+.animation-trigger.animate .skills-item:nth-child(1) { animation-delay: 0.05s; }
+.animation-trigger.animate .skills-item:nth-child(2) { animation-delay: 0.1s; }
+.animation-trigger.animate .skills-item:nth-child(3) { animation-delay: 0.15s; }
+.animation-trigger.animate .skills-item:nth-child(4) { animation-delay: 0.2s; }
+.animation-trigger.animate .skills-item:nth-child(5) { animation-delay: 0.25s; }
+.animation-trigger.animate .skills-item:nth-child(6) { animation-delay: 0.3s; }
+.animation-trigger.animate .skills-item:nth-child(7) { animation-delay: 0.35s; }
+.animation-trigger.animate .skills-item:nth-child(8) { animation-delay: 0.4s; }
+.animation-trigger.animate .skills-item:nth-child(9) { animation-delay: 0.45s; }
+.animation-trigger.animate .skills-item:nth-child(10) { animation-delay: 0.5s; }
+.animation-trigger.animate .skills-item:nth-child(11) { animation-delay: 0.55s; }
+.animation-trigger.animate .skills-item:nth-child(12) { animation-delay: 0.6s; }
+.animation-trigger.animate .skills-item:nth-child(13) { animation-delay: 0.65s; }
+.animation-trigger.animate .skills-item:nth-child(14) { animation-delay: 0.7s; }
+.animation-trigger.animate .skills-item:nth-child(15) { animation-delay: 0.75s; }
+.animation-trigger.animate .skills-item:nth-child(16) { animation-delay: 0.8s; }
+.animation-trigger.animate .skills-item:nth-child(17) { animation-delay: 0.85s; }
+.animation-trigger.animate .skills-item:nth-child(18) { animation-delay: 0.9s; }
+.animation-trigger.animate .skills-item:nth-child(19) { animation-delay: 0.95s; }
+.animation-trigger.animate .skills-item:nth-child(20) { animation-delay: 1s; }
+.animation-trigger.animate .skills-item:nth-child(21) { animation-delay: 1.05s; }
+.animation-trigger.animate .skills-item:nth-child(22) { animation-delay: 1.1s; }
+.animation-trigger.animate .skills-item:nth-child(23) { animation-delay: 1.15s; }
+.animation-trigger.animate .skills-item:nth-child(24) { animation-delay: 1.2s; }
+
+.skills-item {
+  opacity: 0;
 }
