@@ -1,21 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Card, Container, Spinner } from 'react-bootstrap';
+import { Button, Card, Container, Spinner } from 'react-bootstrap';
 import './carrer.css';
-
-type CareerEntry = {
-    id: number;
-    title: string;
-    company: string;
-    image: string;
-    from: number | string;
-    to: number | string;
-    description: string[];
-};
-
-type CareerGroup = {
-    name: string;
-    data: CareerEntry[];
-};
+import { generateResume } from '../../utils/generateResume';
+import type { CareerGroup } from '../../modal';
 
 function Carrer() {
     const [items, setItems] = useState<CareerGroup[]>([]);
@@ -44,6 +31,13 @@ function Carrer() {
         });
     };
 
+    const handleDownloadResume = () => {
+        if (items.length > 0) {
+            generateResume(items);
+        } else {
+            alert("No career data available to generate resume.");
+        }
+    };
 
     return (
         <div id="carrer" className="paddsection">
@@ -98,6 +92,12 @@ function Carrer() {
                         )}
                     </div>
                 )}
+                
+                <div className="text-center mt-4">
+                    <Button variant="primary" onClick={handleDownloadResume}>
+                        Download Resume (PDF)
+                    </Button>
+                </div>
             </Container>
         </div>
     );
